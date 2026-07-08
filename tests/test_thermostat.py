@@ -154,7 +154,46 @@ class ExternalThermostatTests(unittest.TestCase):
         self.assertEqual(state.fan_mode, "medium")
         self.assertEqual(state.hvac_action, "heating")
 
+    def test_auto_falls_back_to_native_auto_when_sensor_is_unavailable(self):
+        thermostat = load_module()
+
+        state = thermostat.resolve_external_control_state(
+            requested_hvac_mode="auto",
+            external_operation_mode="cool",
+            current_temperature=None,
+            target_temperature=25,
+            fan_mode="high",
+            previous_hvac_mode=None,
+            idle_hvac_mode="fan_only",
+            cold_tolerance=1,
+            hot_tolerance=1,
+        )
+
+        self.assertEqual(state.hvac_mode, "auto")
+        self.assertEqual(state.temperature, 25)
+        self.assertIsNone(state.fan_mode)
+        self.assertEqual(state.hvac_action, "idle")
+
+    def test_manual_cool_still_runs_when_sensor_is_unavailable(self):
+        thermostat = load_module()
+
+        state = thermostat.resolve_external_control_state(
+            requested_hvac_mode="cool",
+            external_operation_mode="cool",
+            current_temperature=None,
+            target_temperature=25,
+            fan_mode="high",
+            previous_hvac_mode=None,
+            idle_hvac_mode="fan_only",
+            cold_tolerance=1,
+            hot_tolerance=1,
+        )
+
+        self.assertEqual(state.hvac_mode, "cool")
+        self.assertEqual(state.temperature, 16)
+        self.assertEqual(state.fan_mode, "high")
+        self.assertEqual(state.hvac_action, "cooling")
+
 
 if __name__ == "__main__":
     unittest.main()
-

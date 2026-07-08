@@ -38,6 +38,8 @@
 
 达到目标温度后，默认切到 `fan_only`，这样比直接关机再重启更平顺。也可以在选项页改成 `off`。
 
+如果 Home Assistant 温度传感器变成 `unknown`、`unavailable`、不是数字，或者超过 `target_sensor_max_age` 没有更新，`auto` 会降级发送 Truma 原生 `Automatic` 红外码，温度使用 HA 当前目标温度。这样即使外部温控传感器链路异常，空调仍然可以启动。内置码表中的 Truma 原生 Automatic 没有风速维度。
+
 默认温差逻辑：
 
 - 制冷：高于目标温度 `1°C` 开始制冷，低于目标温度 `1°C` 进入空闲。

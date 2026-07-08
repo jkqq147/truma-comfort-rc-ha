@@ -34,6 +34,9 @@ def resolve_external_control_state(
     if external_operation_mode not in EXTERNAL_OPERATION_MODES:
         raise ValueError(f"Unsupported external operation mode: {external_operation_mode}")
 
+    if requested_hvac_mode == "auto" and current_temperature is None:
+        return ControlState("auto", int(target_temperature), None, "idle")
+
     if requested_hvac_mode == "auto":
         requested_hvac_mode = external_operation_mode
 

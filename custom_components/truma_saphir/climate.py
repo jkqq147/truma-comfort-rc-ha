@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+from datetime import datetime, timezone
 import logging
 from pathlib import Path
 import time
@@ -25,6 +26,7 @@ _LOGGER = logging.getLogger(__name__)
 CONF_CODE_TABLE = "code_table"
 CONF_SEND_TOPIC = "send_topic"
 CONF_TARGET_SENSOR = "target_sensor"
+CONF_TARGET_SENSOR_MAX_AGE = "target_sensor_max_age"
 CONF_INITIAL_TEMPERATURE = "initial_temperature"
 CONF_INITIAL_FAN_MODE = "initial_fan_mode"
 CONF_SEND_REPEATS = "send_repeats"
@@ -49,6 +51,7 @@ DEFAULT_NAME = "Truma Comfort RC"
 DEFAULT_CODE_TABLE = str(Path(__file__).with_name("truma_saphir_codes.csv"))
 DEFAULT_SEND_TOPIC = "IRMINI1b50/send"
 DEFAULT_TARGET_SENSOR = "sensor.combined_indoor_temperature"
+DEFAULT_TARGET_SENSOR_MAX_AGE = 1800.0
 DEFAULT_TEMPERATURE = 26
 DEFAULT_FAN_MODE = "high"
 DEFAULT_UNIQUE_ID = "truma_saphir_ir_climate"
@@ -99,6 +102,9 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
         vol.Optional(CONF_CODE_TABLE, default=DEFAULT_CODE_TABLE): cv.string,
         vol.Optional(CONF_SEND_TOPIC, default=DEFAULT_SEND_TOPIC): cv.string,
         vol.Optional(CONF_TARGET_SENSOR, default=DEFAULT_TARGET_SENSOR): cv.entity_id,
+        vol.Optional(
+            CONF_TARGET_SENSOR_MAX_AGE, default=DEFAULT_TARGET_SENSOR_MAX_AGE
+        ): vol.All(vol.Coerce(float), vol.Range(min=0)),
         vol.Optional(CONF_INITIAL_TEMPERATURE, default=DEFAULT_TEMPERATURE): vol.All(
             vol.Coerce(int), vol.Range(min=16, max=31)
         ),
@@ -167,6 +173,9 @@ async def _async_setup_entity(hass, config, async_add_entities) -> None:
                 code_table=table,
                 send_topic=config.get(CONF_SEND_TOPIC, DEFAULT_SEND_TOPIC),
                 target_sensor=config.get(CONF_TARGET_SENSOR, DEFAULT_TARGET_SENSOR),
+                target_sensor_max_age=config.get(
+                    CONF_TARGET_SENSOR_MAX_AGE, DEFAULT_TARGET_SENSOR_MAX_AGE
+                ),
                 initial_temperature=config.get(CONF_INITIAL_TEMPERATURE, DEFAULT_TEMPERATURE),
                 initial_fan_mode=config.get(CONF_INITIAL_FAN_MODE, DEFAULT_FAN_MODE),
                 send_repeats=config.get(CONF_SEND_REPEATS, DEFAULT_SEND_REPEATS),
@@ -225,6 +234,7 @@ class TrumaSaphirClimate(ClimateEntity, RestoreEntity):
         code_table: CodeTable,
         send_topic: str,
         target_sensor: str | None,
+        target_sensor_max_age: float,
         initial_temperature: int,
         initial_fan_mode: str,
         send_repeats: int,
@@ -250,6 +260,7 @@ class TrumaSaphirClimate(ClimateEntity, RestoreEntity):
         self._code_table = code_table
         self._send_topic = send_topic
         self._target_sensor = target_sensor
+        self._target_sensor_max_age = target_sensor_max_age
         self._send_repeats = send_repeats
         self._repeat_delay = repeat_delay
         self._command_debounce = command_debounce
@@ -319,6 +330,10 @@ class TrumaSaphirClimate(ClimateEntity, RestoreEntity):
         state = self.hass.states.get(self._target_sensor)
         if state is None or state.state in {"unknown", "unavailable"}:
             return None
+        if self._target_sensor_max_age > 0:
+            age = (datetime.now(timezone.utc) - state.last_updated).total_seconds()
+            if age > self._target_sensor_max_age:
+                return None
         try:
             return float(state.state)
         except ValueError:

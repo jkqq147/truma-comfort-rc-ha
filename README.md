@@ -57,6 +57,8 @@ When external thermostat control is enabled, the Home Assistant climate entity e
 
 When `external_operation_mode` is `cool`, `auto` sends the Truma cooling command at `16 C` while cooling is needed. When `external_operation_mode` is `heat`, `auto` sends the Truma heating command at `31 C` while heating is needed. Fan speed remains effective because the generated command is still a cooling or heating IR state with the selected fan mode.
 
+If the Home Assistant temperature sensor is unavailable, unknown, not numeric, or older than `target_sensor_max_age`, `auto` falls back to the native Truma Automatic IR command using the current Home Assistant target temperature. This keeps the air conditioner startable even when the external sensor path is broken. Native Truma Automatic has no fan-speed dimension in the bundled code table.
+
 The default tolerance matches the previous `generic_thermostat` setup:
 
 - Cooling starts at target + `1 C` and idles at target - `1 C`.
@@ -110,6 +112,7 @@ Rows with unsupported modes are ignored.
 | `code_table` | no | bundled CSV | Optional path to another CSV code table |
 | `send_topic` | no | `IRMINI1b50/send` | MQTT topic used by the IR bridge |
 | `target_sensor` | no | `sensor.combined_indoor_temperature` | Current room temperature sensor |
+| `target_sensor_max_age` | no | `1800.0` | Sensor states older than this many seconds are treated as unavailable; set `0` to disable the freshness check |
 | `initial_temperature` | no | `26` | Initial target temperature |
 | `initial_fan_mode` | no | `high` | Initial fan mode |
 | `send_repeats` | no | `2` | Number of times to publish each IR command |
