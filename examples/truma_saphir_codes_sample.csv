@@ -1,0 +1,7 @@
+label,power,mode,temperature_c,fan,protocol,protocol_name,code2,source_code,confidence,notes
+cool_16_high,on,Cooling,16,High,100,TRUMA,E1FFFFFFE6E217,"100,0xE1FFFFFFE6E217,56",verified,verified from remote
+cool_26_high,on,Cooling,26,High,100,TRUMA,EBFFFFFFF0E217,"100,0xEBFFFFFFF0E217,56",verified,verified from remote
+heat_22_medium,on,Heating,22,Medium,100,TRUMA,EEFFFFFFECE917,"100,0xEEFFFFFFECE917,56",verified,verified from remote
+auto_26,on,Automatic,26,,100,TRUMA,E9FFFFFFF0E017,"100,0xE9FFFFFFF0E017,56",verified,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+fan_high,on,Circulated air,,High,100,TRUMA,ECFFFFFFF0E317,"100,0xECFFFFFFF0E317,56",verified,verified from remote; Circulated air high
+power_off,off,Off,,,100,TRUMA,FCFFFFFFECF717,"100,0xFCFFFFFFECF717,56",verified,direct code2 send tested and had effect

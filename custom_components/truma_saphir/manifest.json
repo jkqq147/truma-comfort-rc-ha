@@ -1,0 +1,10 @@
+{
+  "domain": "truma_saphir",
+  "name": "Truma Comfort RC IR Climate",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["mqtt"],
+  "documentation": "https://www.home-assistant.io/integrations/climate/",
+  "iot_class": "local_push",
+  "version": "0.1.0"
+}

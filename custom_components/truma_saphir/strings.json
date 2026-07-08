@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Truma Comfort RC IR Climate",
+        "description": "Create a Truma Comfort RC climate entity using the built-in IR code table and an MQTT IR bridge.",
+        "data": {
+          "name": "Name",
+          "send_topic": "MQTT send topic",
+          "target_sensor": "Temperature sensor entity",
+          "power_guard_entity": "Power guard entity",
+          "power_guard_on_state": "Power guard ready state",
+          "external_thermostat": "Use external thermostat control",
+          "external_operation_mode": "External thermostat direction",
+          "external_idle_hvac_mode": "Mode when target temperature is reached"
+        }
+      }
+    },
+    "error": {
+      "file_not_found": "The code table file does not exist.",
+      "invalid_json": "The service data must be a JSON object."
+    },
+    "abort": {
+      "already_configured": "This unique ID is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Truma Comfort RC Options",
+        "description": "Adjust MQTT, power guard, and external thermostat behavior.",
+        "data": {
+          "send_topic": "MQTT send topic",
+          "target_sensor": "Temperature sensor entity",
+          "power_guard_entity": "Power guard entity",
+          "power_guard_on_state": "Power guard ready state",
+          "external_thermostat": "Use external thermostat control",
+          "external_operation_mode": "External thermostat direction",
+          "external_idle_hvac_mode": "Mode when target temperature is reached",
+          "cold_tolerance": "Cold tolerance",
+          "hot_tolerance": "Hot tolerance",
+          "min_cycle_duration": "Minimum cycle duration seconds",
+          "cooling_temperature": "Cooling command temperature",
+          "heating_temperature": "Heating command temperature",
+          "command_debounce": "Command debounce seconds"
+        }
+      }
+    }
+  }
+}

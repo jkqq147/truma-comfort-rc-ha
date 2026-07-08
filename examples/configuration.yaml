@@ -1,0 +1,13 @@
+climate:
+  - platform: truma_saphir
+    name: Truma Comfort RC
+    unique_id: truma_saphir_ir_climate
+    send_topic: IRMINI1b50/send
+    target_sensor: sensor.combined_indoor_temperature
+    external_thermostat: true
+    external_operation_mode: cool
+    external_idle_hvac_mode: fan_only
+
+    # Optional: enable upstream power before non-off commands.
+    power_guard_entity: input_select.victron_mode
+    power_guard_on_state: "开机"

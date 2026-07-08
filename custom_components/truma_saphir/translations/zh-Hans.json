@@ -1,0 +1,75 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Truma Comfort RC 红外空调",
+        "description": "创建一个通过 MQTT 红外网关控制的 Truma Comfort RC 空调实体。默认使用组件内置红外码表，并启用 Home Assistant 外部温控。",
+        "data": {
+          "name": "实体名称",
+          "send_topic": "MQTT 发送主题",
+          "target_sensor": "室内温度传感器",
+          "power_guard_entity": "逆变器/供电状态实体",
+          "power_guard_on_state": "供电就绪状态",
+          "external_thermostat": "启用外部温控",
+          "external_operation_mode": "外部温控工作方向",
+          "external_idle_hvac_mode": "达到目标温度后的空调模式"
+        },
+        "data_description": {
+          "name": "Home Assistant 中显示的空调名称。",
+          "send_topic": "红外网关接收控制码的 MQTT topic。当前设备默认是 IRMINI1b50/send。",
+          "target_sensor": "用于判断车内真实温度的传感器。外部温控会根据这个温度决定继续制冷、制热或进入送风/关机。",
+          "power_guard_entity": "开启空调前需要先确认的供电实体，例如逆变器模式 input_select.victron_mode。留空则不做供电检查。",
+          "power_guard_on_state": "表示逆变器或上游供电已经可用的状态。当前默认是“开机”。",
+          "external_thermostat": "开启后，目标温度表示期望车内温度；组件会用温度传感器控温，而不是依赖 Truma 自带温控。",
+          "external_operation_mode": "选择本次外部温控是制冷还是制热。前端使用 auto 模式运行，不会自动在制冷和制热之间切换。",
+          "external_idle_hvac_mode": "达到目标温度后发送给空调的底层模式。fan_only 会继续送风，off 会直接关机。"
+        }
+      }
+    },
+    "error": {
+      "file_not_found": "找不到红外码表文件。",
+      "invalid_json": "服务数据必须是 JSON 对象。"
+    },
+    "abort": {
+      "already_configured": "这个空调已经配置过。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Truma Comfort RC 配置",
+        "description": "调整 MQTT、逆变器供电保护，以及 Home Assistant 外部温控行为。保存后集成会自动重新加载。",
+        "data": {
+          "send_topic": "MQTT 发送主题",
+          "target_sensor": "室内温度传感器",
+          "power_guard_entity": "逆变器/供电状态实体",
+          "power_guard_on_state": "供电就绪状态",
+          "external_thermostat": "启用外部温控",
+          "external_operation_mode": "外部温控工作方向",
+          "external_idle_hvac_mode": "达到目标温度后的空调模式",
+          "cold_tolerance": "低温侧容差",
+          "hot_tolerance": "高温侧容差",
+          "min_cycle_duration": "最小压缩机切换间隔",
+          "cooling_temperature": "制冷时发送给空调的温度",
+          "heating_temperature": "制热时发送给空调的温度",
+          "command_debounce": "命令防抖延迟"
+        },
+        "data_description": {
+          "send_topic": "红外网关接收控制码的 MQTT topic。改错会导致红外命令无法发到网关。",
+          "target_sensor": "外部温控使用的真实室温来源。建议使用当前的 sensor.combined_indoor_temperature。",
+          "power_guard_entity": "空调启动前检查的逆变器或上游供电实体。未达到就绪状态时，组件会先尝试开启供电。",
+          "power_guard_on_state": "供电实体达到这个状态后，组件才会发送非关机类空调红外命令。对于 input_select，组件会尽量从实体选项中提供下拉选择。",
+          "external_thermostat": "开启后，HA 负责控温：制冷底层固定低温运行，制热底层固定高温运行，再根据室温切到送风或关机。",
+          "external_operation_mode": "选择 auto 模式背后的工作方向。选 cool 时只会制冷控温；选 heat 时只会制热控温，避免系统自动切到相反方向。",
+          "external_idle_hvac_mode": "达到目标温度后的底层动作。fan_only 更安静平顺，off 更省电但再次启动可能有明显噪音。",
+          "cold_tolerance": "低于目标温度多少度才停止制冷，或低于目标温度多少度才启动制热。默认 1°C，沿用旧 generic_thermostat 逻辑。",
+          "hot_tolerance": "高于目标温度多少度才启动制冷，或高于目标温度多少度才停止制热。默认 1°C，沿用旧 generic_thermostat 逻辑。",
+          "min_cycle_duration": "压缩机从运行到空闲、或从空闲到运行之间的最短等待秒数，用于减少频繁启停。默认 60 秒。",
+          "cooling_temperature": "外部温控制冷时实际发给 Truma 的目标温度。默认 16°C，用于绕过空调自身不准确的温控。",
+          "heating_temperature": "外部温控制热时实际发给 Truma 的目标温度。默认 31°C，用于绕过空调自身不准确的温控。",
+          "command_debounce": "连续调整模式、温度或风速后等待多久再发红外命令，避免短时间内重复发送。默认 0.8 秒。"
+        }
+      }
+    }
+  }
+}

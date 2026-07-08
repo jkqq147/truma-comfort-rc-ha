@@ -1,0 +1,118 @@
+label,power,mode,temperature_c,fan,protocol,protocol_name,code2,source_code,confidence,notes
+cool_16_low,on,Cooling,16,Low,100,TRUMA,F1FFFFFFE6F217,"100,0xF1FFFFFFE6F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_16_medium,on,Cooling,16,Medium,100,TRUMA,E9FFFFFFE6EA17,"100,0xE9FFFFFFE6EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_16_high,on,Cooling,16,High,100,TRUMA,E1FFFFFFE6E217,"100,0xE1FFFFFFE6E217,56",verified,verified from remote
+cool_17_low,on,Cooling,17,Low,100,TRUMA,F2FFFFFFE7F217,"100,0xF2FFFFFFE7F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_17_medium,on,Cooling,17,Medium,100,TRUMA,EAFFFFFFE7EA17,"100,0xEAFFFFFFE7EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_17_high,on,Cooling,17,High,100,TRUMA,E2FFFFFFE7E217,"100,0xE2FFFFFFE7E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_18_low,on,Cooling,18,Low,100,TRUMA,F3FFFFFFE8F217,"100,0xF3FFFFFFE8F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_18_medium,on,Cooling,18,Medium,100,TRUMA,EBFFFFFFE8EA17,"100,0xEBFFFFFFE8EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_18_high,on,Cooling,18,High,100,TRUMA,E3FFFFFFE8E217,"100,0xE3FFFFFFE8E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_19_low,on,Cooling,19,Low,100,TRUMA,F4FFFFFFE9F217,"100,0xF4FFFFFFE9F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_19_medium,on,Cooling,19,Medium,100,TRUMA,ECFFFFFFE9EA17,"100,0xECFFFFFFE9EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_19_high,on,Cooling,19,High,100,TRUMA,E4FFFFFFE9E217,"100,0xE4FFFFFFE9E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_20_low,on,Cooling,20,Low,100,TRUMA,F5FFFFFFEAF217,"100,0xF5FFFFFFEAF217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_20_medium,on,Cooling,20,Medium,100,TRUMA,EDFFFFFFEAEA17,"100,0xEDFFFFFFEAEA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_20_high,on,Cooling,20,High,100,TRUMA,E5FFFFFFEAE217,"100,0xE5FFFFFFEAE217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_21_low,on,Cooling,21,Low,100,TRUMA,F6FFFFFFEBF217,"100,0xF6FFFFFFEBF217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_21_medium,on,Cooling,21,Medium,100,TRUMA,EEFFFFFFEBEA17,"100,0xEEFFFFFFEBEA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_21_high,on,Cooling,21,High,100,TRUMA,E6FFFFFFEBE217,"100,0xE6FFFFFFEBE217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_22_low,on,Cooling,22,Low,100,TRUMA,F7FFFFFFECF217,"100,0xF7FFFFFFECF217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_22_medium,on,Cooling,22,Medium,100,TRUMA,EFFFFFFFECEA17,"100,0xEFFFFFFFECEA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_22_high,on,Cooling,22,High,100,TRUMA,E7FFFFFFECE217,"100,0xE7FFFFFFECE217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_23_low,on,Cooling,23,Low,100,TRUMA,F8FFFFFFEDF217,"100,0xF8FFFFFFEDF217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_23_medium,on,Cooling,23,Medium,100,TRUMA,F0FFFFFFEDEA17,"100,0xF0FFFFFFEDEA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_23_high,on,Cooling,23,High,100,TRUMA,E8FFFFFFEDE217,"100,0xE8FFFFFFEDE217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_24_low,on,Cooling,24,Low,100,TRUMA,F9FFFFFFEEF217,"100,0xF9FFFFFFEEF217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_24_medium,on,Cooling,24,Medium,100,TRUMA,F1FFFFFFEEEA17,"100,0xF1FFFFFFEEEA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_24_high,on,Cooling,24,High,100,TRUMA,E9FFFFFFEEE217,"100,0xE9FFFFFFEEE217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_25_low,on,Cooling,25,Low,100,TRUMA,FAFFFFFFEFF217,"100,0xFAFFFFFFEFF217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_25_medium,on,Cooling,25,Medium,100,TRUMA,F2FFFFFFEFEA17,"100,0xF2FFFFFFEFEA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_25_high,on,Cooling,25,High,100,TRUMA,EAFFFFFFEFE217,"100,0xEAFFFFFFEFE217,56",verified,verified from remote
+cool_26_low,on,Cooling,26,Low,100,TRUMA,FBFFFFFFF0F217,"100,0xFBFFFFFFF0F217,56",verified,verified from remote
+cool_26_medium,on,Cooling,26,Medium,100,TRUMA,F3FFFFFFF0EA17,"100,0xF3FFFFFFF0EA17,56",verified,verified from remote
+cool_26_high,on,Cooling,26,High,100,TRUMA,EBFFFFFFF0E217,"100,0xEBFFFFFFF0E217,56",verified,verified from remote
+cool_27_low,on,Cooling,27,Low,100,TRUMA,FCFFFFFFF1F217,"100,0xFCFFFFFFF1F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_27_medium,on,Cooling,27,Medium,100,TRUMA,F4FFFFFFF1EA17,"100,0xF4FFFFFFF1EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_27_high,on,Cooling,27,High,100,TRUMA,ECFFFFFFF1E217,"100,0xECFFFFFFF1E217,56",verified,verified from remote
+cool_28_low,on,Cooling,28,Low,100,TRUMA,FDFFFFFFF2F217,"100,0xFDFFFFFFF2F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_28_medium,on,Cooling,28,Medium,100,TRUMA,F5FFFFFFF2EA17,"100,0xF5FFFFFFF2EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_28_high,on,Cooling,28,High,100,TRUMA,EDFFFFFFF2E217,"100,0xEDFFFFFFF2E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_29_low,on,Cooling,29,Low,100,TRUMA,FEFFFFFFF3F217,"100,0xFEFFFFFFF3F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_29_medium,on,Cooling,29,Medium,100,TRUMA,F6FFFFFFF3EA17,"100,0xF6FFFFFFF3EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_29_high,on,Cooling,29,High,100,TRUMA,EEFFFFFFF3E217,"100,0xEEFFFFFFF3E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_30_low,on,Cooling,30,Low,100,TRUMA,FFFFFFFFF4F217,"100,0xFFFFFFFFF4F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_30_medium,on,Cooling,30,Medium,100,TRUMA,F7FFFFFFF4EA17,"100,0xF7FFFFFFF4EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_30_high,on,Cooling,30,High,100,TRUMA,EFFFFFFFF4E217,"100,0xEFFFFFFFF4E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_31_low,on,Cooling,31,Low,100,TRUMA,00FFFFFFF5F217,"100,0x00FFFFFFF5F217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_31_medium,on,Cooling,31,Medium,100,TRUMA,F8FFFFFFF5EA17,"100,0xF8FFFFFFF5EA17,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+cool_31_high,on,Cooling,31,High,100,TRUMA,F0FFFFFFF5E217,"100,0xF0FFFFFFF5E217,56",inferred_from_verified_pattern,generated from verified Cooling temperature/fan pattern; byte values use 8-bit wraparound
+heat_16_low,on,Heating,16,Low,100,TRUMA,F0FFFFFFE6F117,"100,0xF0FFFFFFE6F117,56",verified,verified from remote
+heat_16_medium,on,Heating,16,Medium,100,TRUMA,E8FFFFFFE6E917,"100,0xE8FFFFFFE6E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_16_high,on,Heating,16,High,100,TRUMA,E0FFFFFFE6E117,"100,0xE0FFFFFFE6E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_17_low,on,Heating,17,Low,100,TRUMA,F1FFFFFFE7F117,"100,0xF1FFFFFFE7F117,56",verified,verified from remote
+heat_17_medium,on,Heating,17,Medium,100,TRUMA,E9FFFFFFE7E917,"100,0xE9FFFFFFE7E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_17_high,on,Heating,17,High,100,TRUMA,E1FFFFFFE7E117,"100,0xE1FFFFFFE7E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_18_low,on,Heating,18,Low,100,TRUMA,F2FFFFFFE8F117,"100,0xF2FFFFFFE8F117,56",verified,verified from remote
+heat_18_medium,on,Heating,18,Medium,100,TRUMA,EAFFFFFFE8E917,"100,0xEAFFFFFFE8E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_18_high,on,Heating,18,High,100,TRUMA,E2FFFFFFE8E117,"100,0xE2FFFFFFE8E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_19_low,on,Heating,19,Low,100,TRUMA,F3FFFFFFE9F117,"100,0xF3FFFFFFE9F117,56",verified,verified from remote
+heat_19_medium,on,Heating,19,Medium,100,TRUMA,EBFFFFFFE9E917,"100,0xEBFFFFFFE9E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_19_high,on,Heating,19,High,100,TRUMA,E3FFFFFFE9E117,"100,0xE3FFFFFFE9E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_20_low,on,Heating,20,Low,100,TRUMA,F4FFFFFFEAF117,"100,0xF4FFFFFFEAF117,56",verified,verified from remote
+heat_20_medium,on,Heating,20,Medium,100,TRUMA,ECFFFFFFEAE917,"100,0xECFFFFFFEAE917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_20_high,on,Heating,20,High,100,TRUMA,E4FFFFFFEAE117,"100,0xE4FFFFFFEAE117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_21_low,on,Heating,21,Low,100,TRUMA,F5FFFFFFEBF117,"100,0xF5FFFFFFEBF117,56",verified,verified from remote
+heat_21_medium,on,Heating,21,Medium,100,TRUMA,EDFFFFFFEBE917,"100,0xEDFFFFFFEBE917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_21_high,on,Heating,21,High,100,TRUMA,E5FFFFFFEBE117,"100,0xE5FFFFFFEBE117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_22_low,on,Heating,22,Low,100,TRUMA,F6FFFFFFECF117,"100,0xF6FFFFFFECF117,56",verified,verified from remote
+heat_22_medium,on,Heating,22,Medium,100,TRUMA,EEFFFFFFECE917,"100,0xEEFFFFFFECE917,56",verified,verified from remote
+heat_22_high,on,Heating,22,High,100,TRUMA,E6FFFFFFECE117,"100,0xE6FFFFFFECE117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_23_low,on,Heating,23,Low,100,TRUMA,F7FFFFFFEDF117,"100,0xF7FFFFFFEDF117,56",verified,verified from remote
+heat_23_medium,on,Heating,23,Medium,100,TRUMA,EFFFFFFFEDE917,"100,0xEFFFFFFFEDE917,56",verified,verified from remote
+heat_23_high,on,Heating,23,High,100,TRUMA,E7FFFFFFEDE117,"100,0xE7FFFFFFEDE117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_24_low,on,Heating,24,Low,100,TRUMA,F8FFFFFFEEF117,"100,0xF8FFFFFFEEF117,56",verified,verified from remote
+heat_24_medium,on,Heating,24,Medium,100,TRUMA,F0FFFFFFEEE917,"100,0xF0FFFFFFEEE917,56",verified,verified from remote
+heat_24_high,on,Heating,24,High,100,TRUMA,E8FFFFFFEEE117,"100,0xE8FFFFFFEEE117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_25_low,on,Heating,25,Low,100,TRUMA,F9FFFFFFEFF117,"100,0xF9FFFFFFEFF117,56",verified,verified from remote
+heat_25_medium,on,Heating,25,Medium,100,TRUMA,F1FFFFFFEFE917,"100,0xF1FFFFFFEFE917,56",verified,verified from remote
+heat_25_high,on,Heating,25,High,100,TRUMA,E9FFFFFFEFE117,"100,0xE9FFFFFFEFE117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_26_low,on,Heating,26,Low,100,TRUMA,FAFFFFFFF0F117,"100,0xFAFFFFFFF0F117,56",verified,verified from remote
+heat_26_medium,on,Heating,26,Medium,100,TRUMA,F2FFFFFFF0E917,"100,0xF2FFFFFFF0E917,56",verified,verified from remote
+heat_26_high,on,Heating,26,High,100,TRUMA,EAFFFFFFF0E117,"100,0xEAFFFFFFF0E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_27_low,on,Heating,27,Low,100,TRUMA,FBFFFFFFF1F117,"100,0xFBFFFFFFF1F117,56",verified,verified from remote
+heat_27_medium,on,Heating,27,Medium,100,TRUMA,F3FFFFFFF1E917,"100,0xF3FFFFFFF1E917,56",verified,verified from remote
+heat_27_high,on,Heating,27,High,100,TRUMA,EBFFFFFFF1E117,"100,0xEBFFFFFFF1E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_28_low,on,Heating,28,Low,100,TRUMA,FCFFFFFFF2F117,"100,0xFCFFFFFFF2F117,56",verified,verified from remote
+heat_28_medium,on,Heating,28,Medium,100,TRUMA,F4FFFFFFF2E917,"100,0xF4FFFFFFF2E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_28_high,on,Heating,28,High,100,TRUMA,ECFFFFFFF2E117,"100,0xECFFFFFFF2E117,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_29_low,on,Heating,29,Low,100,TRUMA,FDFFFFFFF3F117,"100,0xFDFFFFFFF3F117,56",verified,verified from remote
+heat_29_medium,on,Heating,29,Medium,100,TRUMA,F5FFFFFFF3E917,"100,0xF5FFFFFFF3E917,56",verified,verified from remote
+heat_29_high,on,Heating,29,High,100,TRUMA,EDFFFFFFF3E117,"100,0xEDFFFFFFF3E117,56",verified,verified from remote
+heat_30_low,on,Heating,30,Low,100,TRUMA,FEFFFFFFF4F117,"100,0xFEFFFFFFF4F117,56",verified,verified from remote
+heat_30_medium,on,Heating,30,Medium,100,TRUMA,F6FFFFFFF4E917,"100,0xF6FFFFFFF4E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_30_high,on,Heating,30,High,100,TRUMA,EEFFFFFFF4E117,"100,0xEEFFFFFFF4E117,56",verified,verified from remote
+heat_31_low,on,Heating,31,Low,100,TRUMA,FFFFFFFFF5F117,"100,0xFFFFFFFFF5F117,56",verified,verified from remote
+heat_31_medium,on,Heating,31,Medium,100,TRUMA,F7FFFFFFF5E917,"100,0xF7FFFFFFF5E917,56",inferred_from_verified_pattern,generated from verified Heating temperature/fan pattern; byte values use 8-bit wraparound
+heat_31_high,on,Heating,31,High,100,TRUMA,EFFFFFFFF5E117,"100,0xEFFFFFFFF5E117,56",verified,verified from remote
+auto_16,on,Automatic,16,,100,TRUMA,DFFFFFFFE6E017,"100,0xDFFFFFFFE6E017,56",verified,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_17,on,Automatic,17,,100,TRUMA,E0FFFFFFE7E017,"100,0xE0FFFFFFE7E017,56",verified,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_18,on,Automatic,18,,100,TRUMA,E1FFFFFFE8E017,"100,0xE1FFFFFFE8E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_19,on,Automatic,19,,100,TRUMA,E2FFFFFFE9E017,"100,0xE2FFFFFFE9E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_20,on,Automatic,20,,100,TRUMA,E3FFFFFFEAE017,"100,0xE3FFFFFFEAE017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_21,on,Automatic,21,,100,TRUMA,E4FFFFFFEBE017,"100,0xE4FFFFFFEBE017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_22,on,Automatic,22,,100,TRUMA,E5FFFFFFECE017,"100,0xE5FFFFFFECE017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_23,on,Automatic,23,,100,TRUMA,E6FFFFFFEDE017,"100,0xE6FFFFFFEDE017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_24,on,Automatic,24,,100,TRUMA,E7FFFFFFEEE017,"100,0xE7FFFFFFEEE017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_25,on,Automatic,25,,100,TRUMA,E8FFFFFFEFE017,"100,0xE8FFFFFFEFE017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_26,on,Automatic,26,,100,TRUMA,E9FFFFFFF0E017,"100,0xE9FFFFFFF0E017,56",verified,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_27,on,Automatic,27,,100,TRUMA,EAFFFFFFF1E017,"100,0xEAFFFFFFF1E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_28,on,Automatic,28,,100,TRUMA,EBFFFFFFF2E017,"100,0xEBFFFFFFF2E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_29,on,Automatic,29,,100,TRUMA,ECFFFFFFF3E017,"100,0xECFFFFFFF3E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_30,on,Automatic,30,,100,TRUMA,EDFFFFFFF4E017,"100,0xEDFFFFFFF4E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+auto_31,on,Automatic,31,,100,TRUMA,EEFFFFFFF5E017,"100,0xEEFFFFFFF5E017,56",inferred_from_verified_pattern,Auto has no fan speed on remote; generated from verified Auto temperature pattern
+fan_low,on,Circulated air,,Low,100,TRUMA,FCFFFFFFF0F317,"100,0xFCFFFFFFF0F317,56",verified,verified from remote; Circulated air low
+fan_medium,on,Circulated air,,Medium,100,TRUMA,F4FFFFFFF0EB17,"100,0xF4FFFFFFF0EB17,56",verified,verified from remote; Circulated air medium
+fan_high,on,Circulated air,,High,100,TRUMA,ECFFFFFFF0E317,"100,0xECFFFFFFF0E317,56",verified,verified from remote; Circulated air high
+power_off,off,Off,,,100,TRUMA,FCFFFFFFECF717,"100,0xFCFFFFFFECF717,56",verified,direct code2 send tested and had effect
+power_on_auto22_low,on,Automatic,22,Low,100,TRUMA,F5FFFFFFECF017,"100,0xF5FFFFFFECF017,56",verified,captured from remote; user reported it powered on

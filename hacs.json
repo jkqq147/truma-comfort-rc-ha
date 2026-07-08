@@ -1,0 +1,6 @@
+{
+  "name": "Truma Comfort RC IR Climate",
+  "render_readme": true,
+  "domains": ["climate"],
+  "homeassistant": "2025.1.0"
+}
